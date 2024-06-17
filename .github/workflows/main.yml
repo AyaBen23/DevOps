@@ -26,7 +26,7 @@ jobs:
       - name: Run SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -f simple-api/pom.xml sonar:sonar -Dsonar.projectKey=your_project_key -Dsonar.organization=your_org_key -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn -f simple-api/pom.xml sonar:sonar -Dsonar.projectKey=ayaben23 -Dsonar.organization=Ayaben23 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
   build-and-push-docker-image:
     needs: test-backend
@@ -44,5 +44,4 @@ jobs:
           context: ./simple-api
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-simple-api:latest
           push: ${{ github.ref == 'refs/heads/main' }}
-
 
