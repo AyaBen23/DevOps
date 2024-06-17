@@ -1,0 +1,14 @@
+---
+# tasks file for ansible/roles/launch_proxy
+
+- name: Launch Nginx container
+  community.docker.docker_container:
+    name: nginx
+    image: nginx:latest
+    state: started
+    restart_policy: always
+    networks:
+      - name: my_network
+    ports:
+      - "80:80"
+

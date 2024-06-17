@@ -1,0 +1,17 @@
+---
+# tasks file for ansible/roles/launch_app
+- name: Launch application container
+  community.docker.docker_container:
+    name: my_app
+    image: ayaben23/tp-devops-simple-api:latest
+    state: started
+    restart_policy: always
+    env:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres/db
+      SPRING_DATASOURCE_USERNAME: usr
+      SPRING_DATASOURCE_PASSWORD: pwd
+    networks:
+      - name: my_network
+    ports:
+      - "8080:8080"
+
