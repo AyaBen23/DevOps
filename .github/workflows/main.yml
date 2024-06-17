@@ -18,15 +18,15 @@ jobs:
         uses: actions/setup-java@v3.11.0
         with:
           java-version: '17'
-          distribution: 'temurin' 
+          distribution: 'temurin'
 
       - name: Build and test with Maven
-        run: mvn clean verify
+        run: mvn -f simple-api/pom.xml clean verify
 
       - name: Run SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn sonar:sonar -Dsonar.projectKey=your_project_key -Dsonar.organization=your_org_key -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml 
+        run: mvn -f simple-api/pom.xml sonar:sonar -Dsonar.projectKey=your_project_key -Dsonar.organization=your_org_key -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
   build-and-push-docker-image:
     needs: test-backend
