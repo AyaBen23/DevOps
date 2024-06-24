@@ -6,7 +6,7 @@
     ansible_python_interpreter: /usr/bin/python3
   docker_container: # Run the docker container
     name: backendapi
-    image: ayaben23/tp-devops-simple-api:latest
+    image: ayaben23/tp-devops-simpleapi:latest
     env: # Define the environment variables
       SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/db
       SPRING_DATASOURCE_USERNAME: usr

@@ -21,12 +21,12 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and test with Maven
-        run: mvn -f simple-api/pom.xml clean verify
+        run: mvn -f simpleapi/pom.xml clean verify
 
       - name: Run SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -f simple-api/pom.xml sonar:sonar -Dsonar.projectKey=AyaBen23_DevOps -Dsonar.organization=ayaben23 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn -f simpleapi/pom.xml sonar:sonar -Dsonar.projectKey=AyaBen23_DevOps -Dsonar.organization=ayaben23 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
   build-and-push-docker-image:
     needs: test-backend
@@ -41,7 +41,7 @@ jobs:
       - name: Build image and push backend
         uses: docker/build-push-action@v3
         with:
-          context: ./simple-api
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-simple-api:latest
+          context: ./simpleapi
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-simpleapi:latest
           push: ${{ github.ref == 'refs/heads/main' }}
 
