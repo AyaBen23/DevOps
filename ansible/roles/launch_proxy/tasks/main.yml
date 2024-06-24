@@ -1,14 +1,14 @@
 ---
-# tasks file for ansible/roles/launch_proxy
-
-- name: Launch Nginx container
-  community.docker.docker_container:
-    name: nginx
-    image: nginx:latest
-    state: started
-    restart_policy: always
+# tasks file for roles/proxy
+# Description: This file contains the tasks to deploy the ReverseProxy on the target servers.
+- name: Run ReverseProxy
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  docker_container:
+    name: httpd
+    image: ayaben23/tp-devops-http-server:latest
     networks:
-      - name: my_network
+      - name: app-network
     ports:
       - "80:80"
 

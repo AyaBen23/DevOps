@@ -1,15 +1,14 @@
 ---
-# tasks file for ansible/roles/launch_database
-- name: Launch PostgreSQL container
-  community.docker.docker_container:
-    name: postgres
-    image: postgres:latest
-    state: started
-    restart_policy: always
-    env:
-      POSTGRES_USER: usr
-      POSTGRES_PASSWORD: pwd
-      POSTGRES_DB: db
+# tasks file for roles/database
+# Description: This file contains the tasks to deploy the database on the target servers.
+- name: Run database
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  docker_container:
+    name: database
+    image: ayaben23/tp-devops-database:latest
     networks:
-      - name: my_network
+      - name: app-network
+    ports:
+      - "5432:5432"
 

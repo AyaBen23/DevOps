@@ -1,8 +1,8 @@
+# Description: This is a simple playbook to test the connection to the hosts (just for testing purposes)
 - hosts: all
   gather_facts: false
   become: true
-
   tasks:
-    - name: Test connection
-      ping:
+   - name: Test connection
+     ping:
 

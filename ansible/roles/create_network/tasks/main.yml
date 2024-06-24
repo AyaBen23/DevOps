@@ -1,10 +1,10 @@
 ---
-- name: Create Docker network
-  community.docker.docker_network:
-    name: my_network
+# tasks file for roles/network
+# Description: This file contains the tasks to create a Docker network on the target servers.
+- name: Create a Docker network
+  docker_network:
+    name: app-network
     driver: bridge
-    ipam_config:
-      - subnet: 172.25.0.0/16
+    state: present
   vars:
     ansible_python_interpreter: /usr/bin/python3
-
