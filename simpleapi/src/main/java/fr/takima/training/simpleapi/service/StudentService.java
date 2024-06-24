@@ -1,7 +1,7 @@
-package fr.takima.training.simpleapi.service;
+package fr.takima.training.simple-api.service;
 
-import fr.takima.training.simpleapi.dao.StudentDAO;
-import fr.takima.training.simpleapi.entity.Student;
+import fr.takima.training.simple-api.dao.StudentDAO;
+import fr.takima.training.simple-api.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

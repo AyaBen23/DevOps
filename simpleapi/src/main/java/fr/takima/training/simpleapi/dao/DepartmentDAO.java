@@ -1,6 +1,6 @@
-package fr.takima.training.simpleapi.dao;
+package fr.takima.training.simple-api.dao;
 
-import fr.takima.training.simpleapi.entity.Department;
+import fr.takima.training.simple-api.entity.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

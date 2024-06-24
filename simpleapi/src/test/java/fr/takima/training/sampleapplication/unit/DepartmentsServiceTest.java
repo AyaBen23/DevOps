@@ -1,8 +1,8 @@
 package fr.takima.training.sampleapplication.unit;
 
-import fr.takima.training.simpleapi.dao.DepartmentDAO;
-import fr.takima.training.simpleapi.entity.Department;
-import fr.takima.training.simpleapi.service.DepartmentService;
+import fr.takima.training.simple-api.dao.DepartmentDAO;
+import fr.takima.training.simple-api.entity.Department;
+import fr.takima.training.simple-api.service.DepartmentService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

@@ -1,8 +1,8 @@
-package fr.takima.training.simpleapi.controller;
+package fr.takima.training.simple-api.controller;
 
-import fr.takima.training.simpleapi.entity.Department;
-import fr.takima.training.simpleapi.service.DepartmentService;
-import fr.takima.training.simpleapi.service.StudentService;
+import fr.takima.training.simple-api.entity.Department;
+import fr.takima.training.simple-api.service.DepartmentService;
+import fr.takima.training.simple-api.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

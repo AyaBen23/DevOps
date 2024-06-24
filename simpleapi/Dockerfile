@@ -1,4 +1,4 @@
-# Description: Dockerfile for simpleapi
+# Description: Dockerfile for simple-api
 FROM maven:3.8.6-amazoncorretto-17 AS myapp-build
 
 # Declare the environment variables

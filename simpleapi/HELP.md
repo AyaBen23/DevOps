@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'fr.takima.training.simple-api' is invalid and this project uses 'fr.takima.training.simpleapi' instead.
+* The original package name 'fr.takima.training.simple-api' is invalid and this project uses 'fr.takima.training.simple-api' instead.
 
 # Getting Started
 

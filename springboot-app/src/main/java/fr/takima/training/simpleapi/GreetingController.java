@@ -1,4 +1,4 @@
-package fr.takima.training.simpleapi.controller;
+package fr.takima.training.simple-api.controller;
 
 import org.springframework.web.bind.annotation.*;
 

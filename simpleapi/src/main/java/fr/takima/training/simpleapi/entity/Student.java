@@ -1,4 +1,4 @@
-package fr.takima.training.simpleapi.entity;
+package fr.takima.training.simple-api.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
